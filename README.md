@@ -1,3 +1,5 @@
+[https://apify.com/epctex/forever21-scraper](https://apify.com/epctex/forever21-scraper?fpr=yhdrb)
+
 # Actor - Forever21 Scraper
 
 ## Forever21 scraper
@@ -6,13 +8,13 @@ Since Forever21 doesn't provide an API, this actor should help you to retrieve d
 
 The Forever21 data scraper supports the following features:
 
-- Scrape product details - Get the images, price, colors, sizes, quantity and many more fields of any product!
+- Scrape product details - Get the images, price, colors, sizes, quantity, and many more fields of any product!
 
-- Scrape any categories - Pick your category, select any filters as you like and scrape all the products that is showing up.
+- Scrape any categories - Pick your category, select any filters as you like, and scrape all the products that are showing up.
 
-- Scrape and search by keyword - Built-in keyword search in Forever21. You can search any keyword and retrieve all the results. Change the page, filter or keyword as you like.
+- Scrape and search by keyword - Built-in keyword search in Forever21. You can search any keyword and retrieve all the results. Change the page, filter, or keyword as you like.
 
-## Bugs, fixes, updates and changelog
+## Bugs, fixes, updates, and changelog
 
 This scraper is under active development. If you have any feature requests you can create an issue from [here](https://github.com/epctex/forever21-scraper/issues).
 
@@ -22,17 +24,17 @@ The input of this scraper should be JSON containing the list of pages on Forever
 
 - `search`: (Optional) (String) Keyword that you want to search on Forever21.
 
-- `startUrls`: (Optional) (Array) List of Forever21 URLs. You should only provide product detail, search or category URLs.
+- `startUrls`: (Optional) (Array) List of Forever21 URLs. You should only provide product detail, search, or category URLs.
 
-- `endPage`: (Optional) (Number) Final number of page that you want to scrape. Default is `Infinite`. This is applies to all `search` request and `startUrls` individually.
+- `endPage`: (Optional) (Number) Final number of page that you want to scrape. The default is `Infinite`. This applies to all `search` requests and `startUrls` individually.
 
 - `maxItems`: (Optional) (Number) You can limit scraped items. This should be useful when you search through the big lists or search results.
 
 - `proxy`: (Required) (Proxy Object) Proxy configuration.
 
-- `extendOutputFunction`: (Optional) (String) Function that takes a JQuery handle ($) as argument and returns object with data.
+- `extendOutputFunction`: (Optional) (String) Function that takes a JQuery handle ($) as an argument and returns an object with data.
 
-- `customMapFunction`: (Optional) (String) Function that takes each objects handle as argument and returns object with executing the function.
+- `customMapFunction`: (Optional) (String) Function that takes each object's handle as an argument and returns the object with executing the function.
 
 This solution requires the use of **Proxy servers**, either your own proxy servers or you can use [Apify Proxy](https://www.apify.com/docs/proxy).
 
@@ -42,11 +44,11 @@ When you want to have a scrape over a specific item URL, just copy and paste the
 
 If you would like to scrape only the first page of a list then put the link for the page and have the `endPage` as 1.
 
-With the last approach that explained above you can also fetch any interval of pages. If you provide the 5th page of a list and define the `endPage` parameter as 6 then you'll have the 5th and 6th pages only.
+With the last approach that is explained above you can also fetch any interval of pages. If you provide the 5th page of a list and define the `endPage` parameter as 6 then you'll have the 5th and 6th pages only.
 
 ### Compute Unit Consumption
 
-The actor optimized to run blazing fast and scrape many as items as possible. Therefore, it forefronts all item detail requests. If actor doesn't block very often it'll scrape 100 items in 1 minute with ~0.04-0.08 compute units.
+The actor is optimized to run blazing fast and scrape many items as possible. Therefore, it forefronts all item detail requests. If the actor doesn't block very often it'll scrape 100 items in 1 minute with ~0.04-0.08 compute units.
 
 ### Forever21 Scraper Input example
 
@@ -71,14 +73,13 @@ The actor optimized to run blazing fast and scrape many as items as possible. Th
 During the run, the actor will output messages letting you know what is going on. Each message always contains a short label specifying which page from the provided list is currently specified.
 When items are loaded from the page, you should see a message about this event with a loaded item count and total item count for each page.
 
-If you provide incorrect input to the actor, it will immediately stop with failure state and output an explanation of
-what is wrong.
+If you provide incorrect input to the actor, it will immediately stop with a failure state and output an explanation of what is wrong.
 
 ## Forever21 Export
 
 During the run, the actor stores results into a dataset. Each item is a separate item in the dataset.
 
-You can manage the results in any languague (Python, PHP, Node JS/NPM). See the FAQ or <a href="https://www.apify.com/docs/api" target="blank">our API reference</a> to learn more about getting results from this Forever21 actor.
+You can manage the results in any language (Python, PHP, Node JS/NPM). See the FAQ or <a href="https://www.apify.com/docs/api" target="blank">our API reference</a> to learn more about getting results from this Forever21 actor.
 
 ## Scraped Forever21 Products
 The structure of each item in Forever21 products looks like this:
@@ -2342,4 +2343,4 @@ The structure of each item in Forever21 products looks like this:
 ```
 
 ## Contact
-Please visit us through [epctex.com](https://epctex.com) to see all the products that is available for you. If you are looking for any custom integration or so, please reach out to us through the chat box in [epctex.com](https://epctex.com). In need of support? [devops@epctex.com](mailto:devops@epctex.com) is at your service.
+Please visit us through [epctex.com](https://epctex.com) to see all the products that are available for you. If you are looking for any custom integration or so, please reach out to us through the chat box in [epctex.com](https://epctex.com). In need of support? [devops@epctex.com](mailto:devops@epctex.com) is at your service.
